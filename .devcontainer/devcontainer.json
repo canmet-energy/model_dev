@@ -19,10 +19,10 @@
                 "files.associations": {
                     "*.h2k": "xml",
 					"*.hpxml": "xml"
-                }
+                },
             },
 		}
 	},
   "remoteUser": "vscode",
-  "postCreateCommand": "/venv/bin/python -m venv /workspaces/h2k_hpxml/venv && /workspaces/h2k_hpxml/venv/bin/pip install -r /workspaces/h2k_hpxml/requirements.txt"
+  "postCreateCommand": "/venv/bin/python -m venv /workspaces/os_model_development/venv && /workspaces/os_model_development/venv/bin/pip install -r /workspaces/os_model_development/requirements.txt"
 }
