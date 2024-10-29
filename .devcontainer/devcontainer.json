@@ -13,16 +13,21 @@
 				"ms-azuretools.vscode-docker",
 				"KoichiSasada.vscode-rdbg",
 				"karyfoundation.idf",
-                "ms-python.python"
+				"ms-python.python",
+				"mechatroner.rainbow-csv",
+				"janisdd.vscode-edit-csv",
+				"qwtel.sqlite-viewer",
+				"ms-toolsai.jupyter"
 			],
 			"settings": {
                 "files.associations": {
                     "*.h2k": "xml",
 					"*.hpxml": "xml"
                 },
-            },
+                "python.defaultInterpreterPath": "${containerWorkspaceFolder}/venv/bin/python"
+			}
 		}
 	},
   "remoteUser": "vscode",
-  "postCreateCommand": "/venv/bin/python -m venv /workspaces/os_model_development/venv && /workspaces/os_model_development/venv/bin/pip install -r /workspaces/os_model_development/requirements.txt"
+  "postCreateCommand": "/venv/bin/python -m venv ${containerWorkspaceFolder}/venv && ${containerWorkspaceFolder}/venv/bin/pip install -r ${containerWorkspaceFolder}/requirements.txt && bundle config set path '${containerWorkspaceFolder}/vendor/bundle'&& bundle install"
 }
