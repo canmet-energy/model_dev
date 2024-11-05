@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
-	"name": "H2K_HPXML_DevContainer",
+	"name": "os_model_development",
 	// use a pre-built image 
 	// see https://github.com/canmet-energy/h2k_hpxml_container/blob/main/Dockerfile
 	"image": "canmet/model_dev_container:3.7.0",
