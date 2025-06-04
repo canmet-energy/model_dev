@@ -28,7 +28,7 @@
 		}
 	},
   "remoteUser": "vscode",
-  "postCreateCommand": "/venv/bin/python -m venv /workspaces/h2k_hpxml/venv && /workspaces/h2k_hpxml/venv/bin/pip install -r /workspaces/h2k_hpxml/requirements.txt && energyplus -v && echo \"OpenStudio $(openstudio -v)\" && python --version && python /h2k_hpxml/bin/h2k2hpxml.py  --version",
+  "postCreateCommand": "pip install -r /h2k_hpxml/requirements.txt && energyplus -v && echo \"OpenStudio $(openstudio -v)\" && python --version && python /h2k_hpxml/bin/h2k2hpxml.py  --version",
   "runArgs": [
 	// WSLg support for GUI applications
 	"--env=DISPLAY=:0",
