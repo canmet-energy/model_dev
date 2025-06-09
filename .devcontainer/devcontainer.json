@@ -28,7 +28,7 @@
 		}
 	},
   "remoteUser": "vscode",
-  "postCreateCommand": "pip install -r /h2k_hpxml/requirements.txt && energyplus -v && echo \"OpenStudio $(openstudio -v)\" && python --version && python /h2k_hpxml/bin/h2k2hpxml.py  --version",
+  "postCreateCommand": "if [ \"$(curl -k -o /dev/null -s -w \"%{http_code}\" \"https://intranet.nrcan.gc.ca/\")\" -ge 200 ] && [ \"$(curl -o /dev/null -s -w \"%{http_code}\" \"https://intranet.nrcan.gc.ca/\")\" -lt 400 ]; then echo \"nrcan network detected.\" && git clone https://github.com/canmet-energy/linux_nrcan_certs.git && cd linux_nrcan_certs && ./install_nrcan_certs.sh && cd .. && rm -fr linux_nrcan_certs ; fi && pip install -r /h2k_hpxml/requirements.txt && energyplus -v && echo \"OpenStudio $(openstudio -v)\" && python --version && python /h2k_hpxml/bin/h2k2hpxml.py  --version",
   "runArgs": [
 	// WSLg support for GUI applications
 	"--env=DISPLAY=:0",
